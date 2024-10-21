@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Контакты - Ангарский политехнический техникум{% endblock %}
+
+{% block content %}
+<h1>Контакты</h1>
+<p>Свяжитесь с нами, если у вас есть вопросы или вы хотите узнать больше о нашем техникуме.</p>
+<ul>
+    <li>Email: info@angarskpolytech.ru</li>
+    <li>Телефон: +7 (3955) 123-456</li>
+    <li>Адрес: ул. Ленина, 1, г. Ангарск, Иркутская область, Россия</li>
+</ul>
+<div class="row">
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/image4.jpg') }}" alt="Изображение 1" class="img-fluid">
+    </div>
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/image5.jpg') }}" alt="Изображение 2" class="img-fluid">
+    </div>
+    <div class="col-md-4">
+        <img src="{{ url_for('static', filename='images/image6.jpg') }}" alt="Изображение 3" class="img-fluid">
+    </div>
+</div>
+{% endblock %}

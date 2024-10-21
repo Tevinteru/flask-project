@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Главная - Ангарский политехнический техникум{% endblock %}
+
+{% block content %}
+    <h1 class="display-4">Добро пожаловать в Ангарский политехнический техникум!</h1>
+    <p class="lead">Мы готовим профессионалов для будущего.</p>
+    <hr class="my-4">
+    <p>Узнайте больше о наших программах и жизни в техникуме.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('about') }}" role="button">Узнать о нас</a>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Изображение 1" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Изображение 2" class="img-fluid">
+        </div>
+        <div class="col-md-4">
+            <img src="{{ url_for('static', filename='images/image3.jpg') }}" alt="Изображение 3" class="img-fluid">
+        </div>
+    </div>
+{% endblock %}

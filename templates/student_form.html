@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.last_name.label }} {{ form.last_name(size=20, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.first_name.label }} {{ form.first_name(size=20, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.group.label }} {{ form.group(size=20, class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.height.label }} {{ form.height(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.birthday.label }} {{ form.birthday(class="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.average_score.label }} {{ form.average_score(class="form-control") }}
+        </div>
+        <div class="form-group form-check">
+            {{ form.library_card(class="form-check-input") }} {{ form.library_card.label }}
+        </div>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+    <a href="{{ url_for('students') }}" class="btn btn-secondary">Назад</a>
+{% endblock %}

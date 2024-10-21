@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Детали преподавателя{% endblock %}
+
+{% block content %}
+    <h1>Детали преподавателя</h1>
+    <ul class="list-group">
+        <li class="list-group-item">Фамилия: {{ teacher.last_name }}</li>
+        <li class="list-group-item">Имя: {{ teacher.first_name }}</li>
+        <li class="list-group-item">Отчество: {{ teacher.patronymic }}</li>
+        <li class="list-group-item">День рождения: {{ teacher.birthday }}</li>
+        <li class="list-group-item">Предмет: {{ teacher.subject }}</li>
+        <li class="list-group-item">Образование: {{ teacher.education }}</li>
+        <li class="list-group-item">Стаж: {{ teacher.experience }}</li>
+        <li class="list-group-item">Телефон: {{ teacher.phone }}</li>
+        <li class="list-group-item">E-mail: {{ teacher.email }}</li>
+    </ul>
+    <a href="{{ url_for('teachers') }}" class="btn btn-primary">Назад</a>
+{% endblock %}

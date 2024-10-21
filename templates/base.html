@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>{% block title %}Мое Приложение{% endblock %}</title>
+</head>
+<style>
+    html, body {
+        height: 100%;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    .content {
+        flex: 1;
+    }
+    .img-fluid{
+        width: 300px;  /* или любой другой желаемый размер */
+        height: 200px;
+        object-fit: contain;
+    }
+</style>
+<body>
+    {% include 'header.html' %}
+    <div class="container my-4">
+        {% block content %}{% endblock %}
+    </div>
+    {% include 'footer.html' %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Детали студента{% endblock %}
+
+{% block content %}
+    <h1>Детали студента</h1>
+    <ul class="list-group">
+        <li class="list-group-item">Фамилия: {{ student.last_name }}</li>
+        <li class="list-group-item">Имя: {{ student.first_name }}</li>
+        <li class="list-group-item">Группа: {{ student.group }}</li>
+        <li class="list-group-item">Рост: {{ student.height }}</li>
+        <li class="list-group-item">День рождения: {{ student.birthday }}</li>
+        <li class="list-group-item">Средний балл: {{ student.average_score }}</li>
+        <li class="list-group-item">Читательский билет: {{ student.library_card }}</li>
+    </ul>
+    <a href="{{ url_for('students') }}" class="btn btn-primary">Назад</a>
+{% endblock %}
